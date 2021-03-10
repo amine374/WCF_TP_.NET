@@ -16,6 +16,10 @@ public interface IService
 
 	[OperationContract]
 	CompositeType GetDataUsingDataContract(CompositeType composite);
+
+	[OperationContract]
+	Etudiant GetDataUsingDataContract(Etudiant etd);
+
 	[OperationContract]
 	String information(Etudiant e);
 
@@ -43,3 +47,5 @@ public class CompositeType
 		set { stringValue = value; }
 	}
 }
+
+

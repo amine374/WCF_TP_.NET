@@ -1,23 +1,67 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Web;
 
 /// <summary>
 /// Summary description for Etudiant
 /// </summary>
+[DataContract]
 public class Etudiant
 {
-    public String nom;
-    public String prenom;
-    public int age;
+    private string nom;
+    String prenom;
+    int age;
+
+
     public Etudiant(String nom, String prenom, int age)
     {
         //
         // TODO: Add constructor logic here
         //
-        this.nom = nom;
-        this.prenom = prenom;
-        this.age = age;
+        this.Nom = nom;
+        this.Prenom = prenom;
+        this.Age = age;
+    }
+    [DataMember]
+    public string Nom
+    {
+        get
+        {
+            return nom;
+        }
+
+        set
+        {
+            nom = value;
+        }
+    }
+
+    [DataMember]
+    public string Prenom
+    {
+        get
+        {
+            return prenom;
+        }
+
+        set
+        {
+            prenom = value;
+        }
+    }
+
+    public int Age
+    {
+        get
+        {
+            return age;
+        }
+
+        set
+        {
+            age = value;
+        }
     }
 }

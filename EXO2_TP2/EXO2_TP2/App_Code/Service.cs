@@ -27,8 +27,15 @@ public class Service : IService
 		return composite;
 	}
 
+    public Etudiant GetDataUsingDataContract(Etudiant etd)
+    {
+        throw new NotImplementedException();
+		return etd;
+    }
+
     public string information(Etudiant e)
     {
-		return "Mme,Mr" + e.nom + "a" + e.age + "ans";
-    }
+        throw new NotImplementedException();
+		return "Mme,Mr" + e.Nom + "a" + e.Age + "ans";
+	}
 }
